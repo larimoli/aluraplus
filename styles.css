@@ -131,6 +131,22 @@ body {
     margin: 5em 0;
 }
 
+.tv-img:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.computador-img:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+.celular-img:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+
 .item-titulo {
     color: var(--white);
     font-size: 32px;
@@ -170,3 +186,24 @@ body {
     margin: 2em;
 }
 
+.escrita {
+    display: inline-block;
+}
+
+.texto-animacao {
+    border-right: 2.5px solid var(--salmon);
+    animation: cursor .5s infinite, 
+        escrevendo 5s steps(30, end) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes cursor {
+    0% { border-color: transparent;}
+    50% { border-color: var(--salmon);}
+}
+
+@keyframes escrevendo {
+    from { width: 0;}
+    to { width: 100%;}
+}
